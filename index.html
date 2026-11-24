@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2027 HESS 海外夏令營 International Summer Camps</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <base target="_top" />
+    <style>
+      :root {
+        color-scheme: light;
+        --delft: #163a6b;
+        --orange: #b8430e;
+        --sg-red: #c8102e;
+        --ink: #1c2430;
+        --muted: #5c6b7a;
+        --line: #e4d8c8;
+        --paper: #fffdf8;
+        --cream: #f6f0e8;
+        --danger: #9f2d2d;
+      }
+      * { box-sizing: border-box; }
+      [hidden] { display: none !important; }
+      html { font-size: 18px; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(1200px 420px at 0% -10%, rgba(184, 67, 14, 0.08), transparent 55%),
+          radial-gradient(1000px 480px at 100% 0%, rgba(200, 16, 46, 0.07), transparent 50%),
+          var(--cream);
+        color: var(--ink);
+        font-family: "Noto Sans TC", sans-serif;
+        line-height: 1.65;
+      }
+      h1, h2, .serif { font-family: "Noto Sans TC", sans-serif; font-weight: 700; }
+      .ribbon {
+        height: 8px;
+        background: linear-gradient(
+          90deg,
+          #ae1c28 0 11%,
+          #ffffff 11% 20%,
+          #21468b 20% 32%,
+          #b8430e 42%,
+          #c8102e 68%,
+          #ffffff 86% 100%
+        );
+      }
+      .motif {
+        height: 14px;
+        background-color: var(--delft);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='14' viewBox='0 0 56 14'%3E%3Cpath d='M10 2.1c1 1.3 2.1 1.7 2.1 3.2 0 1.5-.9 2.3-2.1 2.3S7.9 6.8 7.9 5.3C7.9 3.8 9 3.4 10 2.1z' fill='%23fff' fill-opacity='.9'/%3E%3Cpath d='M10 7.7v3.2' stroke='%23fff' stroke-width='.8' fill='none'/%3E%3Cpath d='M38 8.2c2.4-1.4 3.6-3.4 2.4-4.6-1-1-2.6-.2-3.3 1.1C36.4 3.4 35 2.6 34 3.6c-1.2 1.2 0 3.2 2.4 4.6l1.8.8 1.8-.8z' fill='%23ffd4d8'/%3E%3Ccircle cx='37.2' cy='5.6' r='.7' fill='%23c8102e'/%3E%3C/svg%3E");
+        background-size: 56px 14px;
+      }
+      .wrap { width: min(52rem, calc(100% - 2rem)); margin: 0 auto; }
+      header.wrap { padding-top: 1.4rem; }
+      .brand { display: flex; align-items: center; gap: 0.75rem; }
+      .brand p { margin: 0; }
+      .eyebrow { letter-spacing: 0.18em; color: var(--delft); font-size: 0.85rem; }
+      .sub { color: var(--muted); }
+      h1 { margin: 1.25rem 0 0; color: var(--delft); font-size: 1.7rem; line-height: 1.25; }
+      h1 .en { display: block; margin-top: 0.2rem; color: var(--sg-red); font-size: 0.72em; letter-spacing: 0.02em; }
+      h1 .accent { display: block; margin-top: 0.35rem; color: var(--orange); font-size: 0.72em; }
+      .camp-facts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        margin-top: 1rem;
+        padding: 0.8rem 1.05rem;
+        border-radius: 1.1rem;
+        background: #fff;
+        color: var(--ink);
+        box-shadow: inset 0 0 0 1px var(--line);
+        line-height: 1.5;
+      }
+      .camp-facts span.camp {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "name elig date";
+        align-items: baseline;
+        column-gap: 0.65rem;
+        row-gap: 0.2rem;
+        width: 100%;
+      }
+      .camp-facts span.camp > b { grid-area: name; }
+      .camp-facts .elig { grid-area: elig; word-break: keep-all; }
+      .camp-facts .elig .chunk { white-space: nowrap; }
+      .camp-facts .date { grid-area: date; white-space: nowrap; }
+      @media (max-width: 639px) {
+        .camp-facts span.camp {
+          grid-template-columns: 1fr auto;
+          grid-template-areas:
+            "name date"
+            "elig elig";
+        }
+      }
+      .camp-facts b { font-weight: 700; }
+      .camp-facts .nl b { color: var(--orange); }
+      .camp-facts .sg b { color: var(--sg-red); }
+      .intro { max-width: 42rem; margin: 1rem 0 0; color: #3e4c5c; }
+      .scene { margin: 0.35rem auto 0; }
+      .scene svg { width: 100%; height: auto; display: block; }
+      main { padding-bottom: 2.5rem; }
+      form, .stack { display: flex; flex-direction: column; gap: 1.15rem; }
+      form { margin-top: 1.15rem; }
+      form > section { display: flex; flex-direction: column; gap: 1rem; }
+      .notice p, .intro { margin-bottom: 0; }
+      .notice mark {
+        font-weight: 700;
+        color: inherit;
+        background-color: transparent;
+        background-image: linear-gradient(180deg, transparent 0.12em, #fff4a0 0.12em, #ffe566 70%, #fff8c4 100%);
+        padding: 0 0.12em;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+      }
+      .hint { margin: 0; color: var(--muted); }
+      .card {
+        background: var(--paper);
+        border-radius: 1.1rem;
+        padding: 1.15rem 1rem 1.25rem;
+        box-shadow: inset 0 0 0 1px var(--line);
+        transition: background 0.2s ease, box-shadow 0.2s ease;
+      }
+      .card.camp-nl {
+        background: #fff8f1;
+        box-shadow: inset 5px 0 0 var(--orange), inset 0 0 0 1px #efd2bc;
+      }
+      .card.camp-sg {
+        background: #fff7f7;
+        box-shadow: inset 5px 0 0 var(--sg-red), inset 0 0 0 1px #efc9cf;
+      }
+      .card h2, .section-head h2 { margin: 0; color: var(--delft); font-size: 1.35rem; }
+      .grid { display: grid; gap: 0.9rem; margin-top: 0.9rem; }
+      label, .field-label { display: block; font-weight: 500; margin-bottom: 0.3rem; }
+      .req { color: var(--orange); margin-left: 0.15rem; }
+      input, select, button { font: inherit; }
+      input, select {
+        width: 100%;
+        min-height: 3rem;
+        padding: 0.45rem 0.85rem;
+        border: 1px solid #d9cbb8;
+        border-radius: 0.85rem;
+        background: #fff;
+        color: var(--ink);
+      }
+      input:focus, select:focus { outline: 3px solid rgba(196, 83, 12, 0.28); border-color: #c4530c; }
+      .error { margin: 0.3rem 0 0; color: var(--danger); }
+      .banner {
+        margin: 0;
+        padding: 0.75rem 0.9rem;
+        border-radius: 0.85rem;
+        border: 1px solid #e7c1c1;
+        background: #fff6f6;
+        color: var(--danger);
+      }
+      .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 0.75rem; padding: 0 0.15rem; }
+      .section-head p { margin: 0; color: var(--muted); }
+      .notice {
+        margin: 1.05rem auto 0;
+        border: 2px solid #c56a2a;
+        background: linear-gradient(90deg, #fff1e4 0%, #fff7f2 52%, #fff1f3 100%);
+        color: #7a3010;
+        border-radius: 1.1rem;
+        padding: 1rem 1.05rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      .choices { display: grid; gap: 0.5rem; }
+      .choices.two { grid-template-columns: 1fr 1fr; }
+      .choice {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        min-height: 3.1rem;
+        padding: 0.55rem 0.75rem;
+        border: 1px solid var(--line);
+        border-radius: 0.85rem;
+        background: #fff;
+        cursor: pointer;
+      }
+      .choice input { width: 1.15rem; height: 1.15rem; min-height: 0; accent-color: var(--delft); }
+      .choice:has(input:checked) { border-color: var(--orange); background: #fff4ea; }
+      .choice.opt-nl:has(input:checked) { border-color: var(--orange); background: #fff4ea; }
+      .choice.opt-sg:has(input:checked) { border-color: var(--sg-red); background: #fff1f3; }
+      .student-top { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+      .student-top h3 { margin: 0; color: var(--delft); font-size: 1.2rem; font-weight: 500; }
+      button {
+        min-height: 2.75rem;
+        padding: 0.45rem 1rem;
+        border-radius: 0.85rem;
+        border: 1px solid transparent;
+        cursor: pointer;
+      }
+      button:disabled { opacity: 0.55; cursor: not-allowed; }
+      .btn-primary { background: var(--delft); color: #fff; }
+      .btn-orange { width: 100%; min-height: 3.4rem; background: var(--orange); color: #fff; font-size: 1.05rem; }
+      .btn-orange:hover { background: #9a3a0c; }
+      .btn-outline { background: #fff; color: var(--ink); border-color: var(--line); }
+      .btn-block { width: 100%; }
+      .success-mark {
+        width: 3.4rem;
+        height: 3.4rem;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e7eef8;
+        color: var(--delft);
+      }
+      .result { list-style: none; margin: 1rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.7rem; }
+      .result li { background: #f7f3ec; border-radius: 0.85rem; padding: 0.75rem 0.9rem; }
+      .result p { margin: 0.2rem 0 0; }
+      .alias { margin-left: 0.45rem; color: var(--delft); font-weight: 400; }
+      footer { text-align: center; color: var(--muted); padding: 0.5rem 0 2.2rem; }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+      .modal[hidden] { display: none; }
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 40;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .modal-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(22, 36, 58, 0.46);
+      }
+      .modal-dialog {
+        position: relative;
+        width: min(36rem, 100%);
+        max-height: min(88vh, 40rem);
+        overflow: auto;
+        background: var(--paper);
+        border-radius: 1.15rem 1.15rem 0.7rem 0.7rem;
+        padding: 1.25rem 1.15rem 1.2rem;
+        box-shadow: 0 16px 40px rgba(28, 36, 48, 0.22);
+      }
+      .modal-dialog h2 { margin: 0; color: var(--delft); font-size: 1.45rem; }
+      .confirm-meta { margin: 0.7rem 0 0; color: var(--muted); }
+      .confirm-list { list-style: none; margin: 0.9rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+      .confirm-list li {
+        margin: 0;
+        padding: 0.75rem 0.85rem;
+        border-radius: 0.85rem;
+        background: #f7f3ec;
+        line-height: 1.55;
+      }
+      .confirm-list li.camp-nl { background: #fff4ea; box-shadow: inset 4px 0 0 var(--orange); }
+      .confirm-list li.camp-sg { background: #fff1f3; box-shadow: inset 4px 0 0 var(--sg-red); }
+      .modal-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+        margin-top: 1.15rem;
+      }
+      .modal-actions .btn-orange { width: 100%; min-height: 3.1rem; }
+      @media (min-width: 640px) {
+        header.wrap { padding-top: 2.2rem; }
+        h1 { font-size: 2.35rem; }
+        .grid.two { grid-template-columns: 1fr 1fr; }
+        .choices.three { grid-template-columns: 1fr 1fr 1fr; }
+        .card { padding: 1.3rem 1.4rem 1.45rem; }
+        .notice { padding: 1.15rem 1.25rem; font-size: 1.12rem; }
+        .camp-facts { padding: 0.85rem 1.25rem; }
+        .modal { align-items: center; }
+        .modal-dialog { border-radius: 1.15rem; padding: 1.5rem 1.5rem 1.35rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ribbon" aria-hidden="true"></div>
+    <div class="motif" aria-hidden="true"></div>
+    <header class="wrap">
+      <a class="sr-only" href="#registration-form">跳至預約表單</a>
+      <div class="brand">
+        <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+          <rect width="48" height="48" rx="12" fill="#163a6b" />
+          <path d="M14 34.5 24 11.5 34 34.5" fill="none" stroke="#fffdf8" stroke-width="2.2" stroke-linejoin="round" />
+          <circle cx="24" cy="22" r="3.1" fill="#e7a15a" />
+          <path d="M33 16.5c3.2-1.8 4.8-4.4 3.2-6-1.3-1.3-3.5-.3-4.4 1.4-1-1.7-3.2-2.7-4.5-1.4-1.6 1.6 0 4.2 3.2 6L33 18l1.5-1.5z" fill="#ffd0d5" />
+          <circle cx="32.4" cy="13.2" r="1" fill="#c8102e" />
+        </svg>
+        <div>
+          <p class="eyebrow">何嘉仁 HESS</p>
+          <p class="sub">Connecting with the World</p>
+        </div>
+      </div>
+      <h1>
+        2027 HESS 海外夏令營
+        <span class="en">International Summer Camps</span>
+        <span class="accent">預約報名</span>
+      </h1>
+      <p class="camp-facts">
+        <span class="camp nl"><b>荷蘭團</b><span class="elig"><span class="chunk">對象：THC/TH+/ESL&nbsp;10&nbsp;級以上</span><wbr><span class="chunk">或 IA 之 HESS 學員</span></span><span class="date">2027/7/9～7/25</span></span>
+        <span class="camp sg"><b>新加坡團</b><span class="elig"><span class="chunk">對象：THC/TH+/ESL&nbsp;8&nbsp;級以上</span><wbr><span class="chunk">或 IA 之 HESS 學員</span></span><span class="date">2027/7/25～7/30</span></span>
+      </p>
+      <p class="intro">請區域代表填寫。一次可登記多位學生，系統會為每位學生記下伺服器預約時間。</p>
+    </header>
+    <div class="scene wrap" aria-hidden="true">
+      <svg viewBox="0 0 900 236" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="1" y2="0.2">
+            <stop offset="0%" stop-color="#eef4fb" />
+            <stop offset="48%" stop-color="#f7efe4" />
+            <stop offset="100%" stop-color="#fdeeee" />
+          </linearGradient>
+        </defs>
+        <rect width="900" height="236" fill="url(#sky)" />
+        <circle cx="455" cy="46" r="22" fill="#f3d7a3" opacity="0.85" />
+        <g fill="#fffdf8" stroke="#163a6b" stroke-width="2" stroke-linejoin="round">
+          <polygon points="28,78 28,70 40,70 40,58 52,58 62,58 62,44 80,44 80,58 90,58 102,58 102,70 114,70 114,78" />
+          <rect x="28" y="78" width="86" height="108" />
+          <polygon points="124,58 124,50 136,50 136,38 148,38 162,38 162,24 180,24 180,38 194,38 206,38 206,50 218,50 218,58" />
+          <rect x="124" y="58" width="94" height="128" />
+          <polygon points="228,86 228,78 240,78 240,66 252,66 262,66 262,52 280,52 280,66 290,66 302,66 302,78 314,78 314,86" />
+          <rect x="228" y="86" width="86" height="100" />
+        </g>
+        <g fill="#d7e4f2" stroke="#163a6b" stroke-width="1.3">
+          <rect x="42" y="90" width="16" height="18" rx="1" /><rect x="84" y="90" width="16" height="18" rx="1" />
+          <rect x="42" y="118" width="16" height="18" rx="1" /><rect x="84" y="118" width="16" height="18" rx="1" />
+          <rect x="140" y="70" width="16" height="18" rx="1" /><rect x="186" y="70" width="16" height="18" rx="1" />
+          <rect x="140" y="98" width="16" height="18" rx="1" /><rect x="186" y="98" width="16" height="18" rx="1" />
+          <rect x="140" y="126" width="16" height="18" rx="1" /><rect x="186" y="126" width="16" height="18" rx="1" />
+          <rect x="242" y="98" width="16" height="18" rx="1" /><rect x="282" y="98" width="16" height="18" rx="1" />
+          <rect x="242" y="126" width="16" height="18" rx="1" /><rect x="282" y="126" width="16" height="18" rx="1" />
+        </g>
+        <g fill="#b8430e"><rect x="62" y="154" width="14" height="32" /></g>
+        <g fill="#21468b"><rect x="166" y="154" width="14" height="32" /></g>
+        <g fill="#c8102e"><rect x="262" y="154" width="14" height="32" /></g>
+        <g transform="translate(392 186)">
+          <path d="M-28 0 28 0 14-90H-14Z" fill="#fffdf8" stroke="#163a6b" stroke-width="2.3" stroke-linejoin="round" />
+          <path d="M-16-88h32l-8-16h-16z" fill="#163a6b" />
+          <rect x="-5.5" y="-32" width="11" height="32" fill="#b8430e" />
+          <g transform="translate(0 -96)" fill="#163a6b">
+            <rect x="-3" y="-60" width="6" height="52" rx="2" transform="rotate(22)" />
+            <rect x="-3" y="-60" width="6" height="52" rx="2" transform="rotate(112)" />
+            <rect x="-3" y="-60" width="6" height="52" rx="2" transform="rotate(202)" />
+            <rect x="-3" y="-60" width="6" height="52" rx="2" transform="rotate(292)" />
+            <circle r="5.6" fill="#e7a15a" stroke="#163a6b" stroke-width="1.4" />
+          </g>
+        </g>
+        <g transform="translate(318 154)" fill="none" stroke="#163a6b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="14" cy="24" r="14" fill="#fffdf8" />
+          <circle cx="68" cy="24" r="14" fill="#fffdf8" />
+          <path d="M14 24 32 24 46 6h20M32 24 52 10 68 24M46 6 38 1M66 6h14" />
+          <circle cx="66" cy="6" r="2" fill="#c8102e" stroke="none" />
+        </g>
+        <g transform="translate(628 54)" fill="#fffdf8" stroke="#163a6b" stroke-width="1.8" stroke-linejoin="round">
+          <rect x="86" y="42" width="22" height="92" />
+          <rect x="116" y="22" width="26" height="112" />
+          <rect x="150" y="48" width="20" height="86" />
+          <rect x="178" y="36" width="24" height="98" />
+          <rect x="0" y="58" width="28" height="76" />
+          <rect x="34" y="36" width="22" height="98" />
+          <rect x="62" y="70" width="18" height="64" />
+        </g>
+        <g transform="translate(720 38)" fill="#fffdf8" stroke="#163a6b" stroke-width="2" stroke-linejoin="round">
+          <rect x="0" y="40" width="22" height="108" />
+          <rect x="30" y="40" width="22" height="108" />
+          <rect x="60" y="40" width="22" height="108" />
+          <path d="M-8 40h98l-6-14H-2z" fill="#d7e4f2" />
+          <rect x="8" y="52" width="8" height="14" fill="#d7e4f2" stroke-width="1.2" />
+          <rect x="38" y="52" width="8" height="14" fill="#d7e4f2" stroke-width="1.2" />
+          <rect x="68" y="52" width="8" height="14" fill="#d7e4f2" stroke-width="1.2" />
+          <rect x="8" y="74" width="8" height="14" fill="#d7e4f2" stroke-width="1.2" />
+          <rect x="38" y="74" width="8" height="14" fill="#d7e4f2" stroke-width="1.2" />
+          <rect x="68" y="74" width="8" height="14" fill="#d7e4f2" stroke-width="1.2" />
+        </g>
+        <g transform="translate(508 112)">
+          <ellipse cx="22" cy="72" rx="28" ry="8" fill="#163a6b" opacity="0.12" />
+          <path d="M18 70c-16-10-20-28-8-40 6-6 16-8 24-4 10-14 28-16 36-4 8 10 2 26-10 34 8 8 10 18 2 26-10 10-28 8-36-2-2 4-8 6-12 2-6-5-2-14 4-12z" fill="#fffdf8" stroke="#163a6b" stroke-width="2" />
+          <path d="M34 28c8-2 16 2 18 10 2 8-4 14-12 16" fill="none" stroke="#163a6b" stroke-width="1.5" />
+          <circle cx="40" cy="30" r="7.5" fill="#fffdf8" stroke="#163a6b" stroke-width="2" />
+          <path d="M36 28c2 1 5 1 7-1" fill="none" stroke="#163a6b" stroke-width="1.3" stroke-linecap="round" />
+          <circle cx="42.5" cy="29.2" r="1.1" fill="#163a6b" />
+          <path d="M8 54c12 8 28 14 46 8 6 8 4 18-6 22-16 6-32-2-38-12-4-6-6-14-2-18z" fill="#c8102e" opacity="0.18" />
+          <path d="M58 58c14 6 28 4 34-8" fill="none" stroke="#7aa0c8" stroke-width="1.6" stroke-linecap="round" />
+        </g>
+        <rect x="0" y="186" width="900" height="50" fill="#d4e4f2" />
+        <path d="M0 198c40-10 70-10 110 0s70 10 110 0 70-10 110 0 70 10 110 0 70-10 110 0 70 10 110 0 70-10 110 0 70 10 110 0" fill="none" stroke="#163a6b" stroke-opacity="0.28" stroke-width="1.6" />
+        <g transform="translate(20 186)"><path d="M0 0c-2-16-1-28 0-44" stroke="#2f6b45" stroke-width="2" fill="none" /><path d="M0-46c5 7 12 9 12 18 0 7-5 11-12 11S-12-21-12-28c0-9 7-11 12-18z" fill="#e07a2f" /></g>
+        <g transform="translate(96 186)"><path d="M0 0c-2-16-1-28 0-44" stroke="#2f6b45" stroke-width="2" fill="none" /><path d="M0-46c5 7 12 9 12 18 0 7-5 11-12 11S-12-21-12-28c0-9 7-11 12-18z" fill="#c4530c" /></g>
+        <g transform="translate(232 186)"><path d="M0 0c-2-16-1-28 0-44" stroke="#2f6b45" stroke-width="2" fill="none" /><path d="M0-46c5 7 12 9 12 18 0 7-5 11-12 11S-12-21-12-28c0-9 7-11 12-18z" fill="#d4546a" /></g>
+        <g transform="translate(448 186)"><path d="M0 0c-2-16-1-28 0-44" stroke="#2f6b45" stroke-width="2" fill="none" /><path d="M0-46c5 7 12 9 12 18 0 7-5 11-12 11S-12-21-12-28c0-9 7-11 12-18z" fill="#e7a15a" /></g>
+        <g transform="translate(470 150)">
+          <path d="M0 36c3.4-2 5.2-4.8 3.4-6.5-1.5-1.4-3.8-.3-4.8 1.5C-2.4 29.2-4.7 28.1-6.2 29.5-8 31.2-6.2 34 0 36z" fill="#ffd0d5" stroke="#c8102e" stroke-width="1" />
+          <path d="M8 28c3.4-2 5.2-4.8 3.4-6.5C10 20.1 7.6 21.2 6.6 23 5.6 21.2 3.3 20.1 1.8 21.5 0 23.2 1.8 26 8 28z" fill="#c8102e" />
+          <circle cx="1.2" cy="30.2" r="1.15" fill="#7a1840" />
+        </g>
+        <g transform="translate(790 148)">
+          <path d="M0 36c3.8-2.2 5.8-5.4 3.8-7.3-1.7-1.6-4.3-.3-5.4 1.7C-2.7 29.3-5.3 28-6.9 29.6-8.9 31.5-6.9 34.7 0 36z" fill="#ffd0d5" stroke="#c8102e" stroke-width="1" />
+          <path d="M10 26c3.8-2.2 5.8-5.4 3.8-7.3-1.7-1.6-4.3-.3-5.4 1.7-1.1-2-3.7-3.3-5.4-1.7C1.1 20.6 3.1 23.8 10 26z" fill="#c8102e" />
+          <circle cx="1.4" cy="29.4" r="1.2" fill="#7a1840" />
+        </g>
+        <g transform="translate(846 160)">
+          <path d="M0 30c3.2-1.8 4.8-4.5 3.2-6.1-1.4-1.3-3.6-.3-4.5 1.4C-2.2 23.6-4.4 22.6-5.8 23.9-7.4 25.5-5.8 28.2 0 30z" fill="#fff1f3" stroke="#c8102e" stroke-width="1" />
+          <path d="M8 22c3.2-1.8 4.8-4.5 3.2-6.1-1.4-1.3-3.6-.3-4.5 1.4C5.8 15.6 3.6 14.6 2.2 15.9.6 17.5 2.2 20.2 8 22z" fill="#e35a6a" />
+          <circle cx="1" cy="24.6" r="1.05" fill="#7a1840" />
+        </g>
+      </svg>
+    </div>
+
+    <aside class="notice wrap">
+      <p><mark>此為預約報名，並非正式報名</mark>。主辦單位將依 (1) 區域配額與 (2) 預約先後統一確認名額；<br />確認後會主動通知，再請於 HESS 系統完成正式報名、收費與紙本文件簽署。主辦單位確認報名結果前，請區域代表勿向家長承諾保證錄取。</p>
+    </aside>
+
+    <main class="wrap" id="registration-form">
+      <div id="form-view">
+        <form id="reg-form" autocomplete="off" novalidate>
+          <p class="hint">以下欄位皆為必填。</p>
+          <div id="form-error" class="banner" hidden></div>
+          <section class="card">
+            <h2 class="serif">填寫資訊</h2>
+            <div class="grid two">
+              <div data-field="submitter">
+                <label for="submitter">填寫人<span class="req" aria-hidden="true">*</span><span class="sr-only">（必填）</span></label>
+                <input id="submitter" name="submitter" placeholder="區域代表姓名" />
+                <p class="error" data-error="submitter" hidden></p>
+              </div>
+              <div data-field="region">
+                <label for="region">區域<span class="req" aria-hidden="true">*</span><span class="sr-only">（必填）</span></label>
+                <select id="region" name="region">
+                  <option value="">請選擇區域</option>
+                </select>
+                <p class="error" data-error="region" hidden></p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-head">
+              <h2 class="serif">預約報名表</h2>
+              <p id="student-count">共 1 位</p>
+            </div>
+            <p id="students-error" class="error" hidden></p>
+            <div id="students" class="stack"></div>
+            <button type="button" class="btn-outline btn-block" id="add-student">新增學生</button>
+            <p id="max-note" class="hint" style="text-align: center" hidden>一次最多 40 位，請分次送出。</p>
+          </section>
+
+          <button type="submit" class="btn-orange" id="submit-btn">送出預約報名（1 位學生）</button>
+        </form>
+      </div>
+
+      <div id="success-view" class="stack" hidden>
+        <section class="card">
+          <div class="success-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28">
+              <path d="M5 12.5 9.2 17 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h2 class="serif" style="font-size: 1.8rem; margin-top: 0.8rem">預約已送出</h2>
+          <p id="success-lead"></p>
+          <ol class="result" id="success-list"></ol>
+          <p class="hint">請留存此畫面。</p>
+        </section>
+      </div>
+    </main>
+    <footer class="wrap">何嘉仁 HESS · 2027 海外夏令營 International Summer Camps</footer>
+
+    <div id="confirm-modal" class="modal" hidden>
+      <div class="modal-backdrop" id="confirm-backdrop"></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+        <h2 id="confirm-title" class="serif">您填寫如下，請確認清單</h2>
+        <p class="confirm-meta" id="confirm-meta"></p>
+        <ol class="confirm-list" id="confirm-list"></ol>
+        <p class="hint" id="confirm-status" role="status" aria-live="polite" hidden></p>
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" id="confirm-back">返回修改</button>
+          <button type="button" class="btn-orange" id="confirm-send">確認送出</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var REGIONS = ["北北區","北東信義區","北南新湖區","文新區","板橋中華區","三鶯區","漢雨樹林區","五股文華","雙和區","城和區","新莊三重區","基宜花區","南港汐止區","桃園區","新竹區","中區","台南區","高雄台東區"];
+      var CAMPS = ["新加坡團","荷蘭團"];
+      var INTENTS = ["中等","很高","已確定要報名待繳訂金"];
+      var GENDERS = ["男","女"];
+      var MAX_STUDENTS = 40;
+      var MAX_SHORT = 50;
+      var nextId = 1;
+      var students = [blankStudent()];
+      var submitting = false;
+      var pendingPayload = null;
+      // 部署網址（重新部署時用「編輯現有部署 → 新版本」，網址不變）。
+      var EXEC_URL = "https://script.google.com/macros/s/AKfycbzskyNWYP1jK2OhX5agIkpAvSYLaUT3rRJxNspJ7Yeu62bVj7p9hn9gLgnlNKqYPAYzag/exec";
+      var REQUEST_TIMEOUT_MS = 20000;
+      // 記住上一次未成功的送出編號：同樣內容再按送出時沿用，伺服器就不會重複寫入。
+      var lastAttempt = { key: "", id: "" };
+
+      function newSubmissionId() {
+        var id = "s" + Date.now().toString(36);
+        try {
+          var bytes = new Uint8Array(12);
+          window.crypto.getRandomValues(bytes);
+          for (var i = 0; i < bytes.length; i++) id += (bytes[i] % 36).toString(36);
+        } catch (error) {
+          id += Math.random().toString(36).slice(2, 14);
+        }
+        return id.replace(/[^A-Za-z0-9_-]/g, "").slice(0, 64);
+      }
+
+      var regionSelect = document.getElementById("region");
+      REGIONS.forEach(function (region) {
+        var option = document.createElement("option");
+        option.value = region;
+        option.textContent = region;
+        regionSelect.appendChild(option);
+      });
+
+      function blankStudent() {
+        return { id: "s" + nextId++, camp: "", chineseName: "", englishAlias: "", branch: "", grade: "", age: "", gender: "", intent: "" };
+      }
+
+      function campClass(camp) {
+        if (camp === "荷蘭團") return " camp-nl";
+        if (camp === "新加坡團") return " camp-sg";
+        return "";
+      }
+
+      function renderStudents() {
+        var root = document.getElementById("students");
+        root.innerHTML = "";
+        students.forEach(function (student, index) {
+          root.appendChild(studentCard(student, index));
+        });
+        document.getElementById("student-count").textContent = "共 " + students.length + " 位";
+        document.getElementById("submit-btn").textContent = submitting
+          ? "送出中…"
+          : "送出預約報名（" + students.length + " 位學生）";
+        document.getElementById("add-student").disabled = students.length >= MAX_STUDENTS;
+        document.getElementById("max-note").hidden = students.length < MAX_STUDENTS;
+      }
+
+      function studentCard(student, index) {
+        var article = document.createElement("article");
+        article.className = "card" + campClass(student.camp);
+        article.dataset.studentId = student.id;
+
+        var top = document.createElement("div");
+        top.className = "student-top";
+        var title = document.createElement("h3");
+        title.textContent = "學生 " + (index + 1);
+        top.appendChild(title);
+        if (students.length > 1) {
+          var remove = document.createElement("button");
+          remove.type = "button";
+          remove.className = "btn-outline";
+          remove.textContent = "移除";
+          remove.addEventListener("click", function () {
+            students = students.filter(function (item) { return item.id !== student.id; });
+            clearErrors();
+            renderStudents();
+          });
+          top.appendChild(remove);
+        }
+        article.appendChild(top);
+
+        article.appendChild(choiceField(student, "camp", "報名營隊", CAMPS, true, article));
+        var grid = document.createElement("div");
+        grid.className = "grid two";
+        grid.appendChild(textField(student, "chineseName", "中文姓名", "例如：王小明"));
+        grid.appendChild(textField(student, "englishAlias", "英文別名", "例如：Amy"));
+        grid.appendChild(textField(student, "branch", "分校", "例如：天母分校"));
+        grid.appendChild(textField(student, "grade", "就讀級數", "例：ESL 10"));
+        grid.appendChild(ageField(student));
+        grid.appendChild(choiceField(student, "gender", "性別", GENDERS, true, article));
+        article.appendChild(grid);
+        article.appendChild(choiceField(student, "intent", "報名意願", INTENTS, false, article));
+        return article;
+      }
+
+      function fieldShell(name, label) {
+        var wrap = document.createElement("div");
+        wrap.dataset.field = name;
+        var lab = document.createElement("p");
+        lab.className = "field-label";
+        lab.textContent = label;
+        var star = document.createElement("span");
+        star.className = "req";
+        star.setAttribute("aria-hidden", "true");
+        star.textContent = "*";
+        lab.appendChild(star);
+        wrap.appendChild(lab);
+        var error = document.createElement("p");
+        error.className = "error";
+        error.dataset.error = name;
+        error.hidden = true;
+        wrap.appendChild(error);
+        return wrap;
+      }
+
+      function textField(student, key, label, placeholder) {
+        var wrap = fieldShell(key, label);
+        var input = document.createElement("input");
+        input.value = student[key];
+        input.placeholder = placeholder;
+        input.addEventListener("input", function () { student[key] = input.value; });
+        wrap.insertBefore(input, wrap.lastChild);
+        return wrap;
+      }
+
+      function ageField(student) {
+        var wrap = fieldShell("age", "年齡");
+        var input = document.createElement("input");
+        input.type = "number";
+        input.inputMode = "numeric";
+        input.min = "1";
+        input.max = "99";
+        input.step = "1";
+        input.placeholder = "例如：11";
+        input.value = student.age;
+        input.addEventListener("input", function () { student.age = input.value; });
+        wrap.insertBefore(input, wrap.lastChild);
+        return wrap;
+      }
+
+      function choiceField(student, key, label, options, two, article) {
+        var wrap = fieldShell(key, label);
+        var group = document.createElement("div");
+        group.className = "choices" + (two ? " two" : " three");
+        group.setAttribute("role", "radiogroup");
+        options.forEach(function (option) {
+          var item = document.createElement("label");
+          item.className = "choice";
+          if (key === "camp" && option === "荷蘭團") item.className += " opt-nl";
+          if (key === "camp" && option === "新加坡團") item.className += " opt-sg";
+          var radio = document.createElement("input");
+          radio.type = "radio";
+          radio.name = student.id + "-" + key;
+          radio.value = option;
+          radio.checked = student[key] === option;
+          radio.addEventListener("change", function () {
+            student[key] = option;
+            if (key === "camp" && article) article.className = "card" + campClass(option);
+          });
+          item.appendChild(radio);
+          item.appendChild(document.createTextNode(option));
+          group.appendChild(item);
+        });
+        wrap.insertBefore(group, wrap.lastChild);
+        return wrap;
+      }
+
+      function clearErrors() {
+        document.querySelectorAll("[data-error]").forEach(function (node) {
+          node.hidden = true;
+          node.textContent = "";
+        });
+        document.querySelectorAll("[data-invalid]").forEach(function (node) {
+          node.removeAttribute("data-invalid");
+        });
+        document.getElementById("form-error").hidden = true;
+      }
+
+      function showError(scope, name, message) {
+        var root = scope || document;
+        var node = root.querySelector('[data-error="' + name + '"]');
+        if (!node) return;
+        node.hidden = false;
+        node.textContent = message;
+        var field = node.closest("[data-field]");
+        if (field) field.setAttribute("data-invalid", "true");
+      }
+
+      function applyErrors(fieldErrors) {
+        clearErrors();
+        if (!fieldErrors) return;
+        if (fieldErrors.submitter) showError(document, "submitter", fieldErrors.submitter);
+        if (fieldErrors.region) showError(document, "region", fieldErrors.region);
+        if (fieldErrors.students) {
+          var studentsError = document.getElementById("students-error");
+          studentsError.hidden = false;
+          studentsError.textContent = fieldErrors.students;
+          studentsError.setAttribute("data-invalid", "true");
+        }
+        (fieldErrors.items || []).forEach(function (item, index) {
+          var card = document.querySelectorAll("#students article")[index];
+          if (!card || !item) return;
+          Object.keys(item).forEach(function (key) {
+            showError(card, key, item[key]);
+          });
+        });
+        var invalid = document.querySelector("[data-invalid='true']");
+        if (invalid) invalid.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      function requiredText(value, missing) {
+        if (typeof value !== "string") return { ok: false, error: missing };
+        var trimmed = value.trim();
+        if (!trimmed) return { ok: false, error: missing };
+        if (Array.from(trimmed).length > MAX_SHORT) return { ok: false, error: "請勿超過 " + MAX_SHORT + " 個字" };
+        return { ok: true, value: trimmed };
+      }
+
+      function parseChoice(value, list, missing) {
+        if (typeof value !== "string") return { ok: false, error: missing };
+        var trimmed = value.trim();
+        if (list.indexOf(trimmed) === -1) return { ok: false, error: missing };
+        return { ok: true, value: trimmed };
+      }
+
+      function parseAge(value) {
+        if (typeof value === "number" && Number.isInteger(value) && value >= 1 && value <= 99) {
+          return { ok: true, value: value };
+        }
+        if (typeof value === "string" && /^\d+$/.test(value.trim())) {
+          var age = Number(value.trim());
+          if (age >= 1 && age <= 99) return { ok: true, value: age };
+        }
+        if (typeof value === "string" && value.trim() === "") return { ok: false, error: "請填寫年齡" };
+        return { ok: false, error: "年齡請填寫 1 到 99 的整數" };
+      }
+
+      function collectPayload() {
+        return {
+          submitter: document.getElementById("submitter").value,
+          region: document.getElementById("region").value,
+          students: students.map(function (student) {
+            return {
+              camp: student.camp,
+              chineseName: student.chineseName,
+              englishAlias: student.englishAlias,
+              branch: student.branch,
+              grade: student.grade,
+              age: student.age,
+              gender: student.gender,
+              intent: student.intent,
+            };
+          }),
+        };
+      }
+
+      function validateClient(payload) {
+        var fieldErrors = { items: [] };
+        var submitter = requiredText(payload.submitter, "請填寫填寫人");
+        var region = parseChoice(payload.region, REGIONS, "請選擇區域");
+        if (!submitter.ok) fieldErrors.submitter = submitter.error;
+        if (!region.ok) fieldErrors.region = region.error;
+
+        if (!payload.students.length) {
+          fieldErrors.students = "請至少填寫一位學生";
+          return { ok: false, error: "請至少填寫一位學生", fieldErrors: fieldErrors };
+        }
+        if (payload.students.length > MAX_STUDENTS) {
+          fieldErrors.students = "一次最多登記 " + MAX_STUDENTS + " 位學生，請分次送出。";
+          return { ok: false, error: fieldErrors.students, fieldErrors: fieldErrors };
+        }
+
+        var parsedStudents = [];
+        payload.students.forEach(function (student) {
+          var errors = {};
+          var camp = parseChoice(student.camp, CAMPS, "請選擇報名營隊");
+          var chineseName = requiredText(student.chineseName, "請填寫中文姓名");
+          var englishAlias = requiredText(student.englishAlias, "請填寫英文別名");
+          var branch = requiredText(student.branch, "請填寫分校");
+          var grade = requiredText(student.grade, "請填寫就讀級數");
+          var age = parseAge(student.age);
+          var gender = parseChoice(student.gender, GENDERS, "請選擇性別");
+          var intent = parseChoice(student.intent, INTENTS, "請選擇報名意願");
+          if (!camp.ok) errors.camp = camp.error;
+          if (!chineseName.ok) errors.chineseName = chineseName.error;
+          if (!englishAlias.ok) errors.englishAlias = englishAlias.error;
+          if (!branch.ok) errors.branch = branch.error;
+          if (!grade.ok) errors.grade = grade.error;
+          if (!age.ok) errors.age = age.error;
+          if (!gender.ok) errors.gender = gender.error;
+          if (!intent.ok) errors.intent = intent.error;
+          fieldErrors.items.push(errors);
+          if (!Object.keys(errors).length) {
+            parsedStudents.push({
+              camp: camp.value,
+              chineseName: chineseName.value,
+              englishAlias: englishAlias.value,
+              branch: branch.value,
+              grade: grade.value,
+              age: age.value,
+              gender: gender.value,
+              intent: intent.value,
+            });
+          }
+        });
+
+        var studentInvalid = fieldErrors.items.some(function (item) {
+          return Object.keys(item).length > 0;
+        });
+        if (!submitter.ok || !region.ok || studentInvalid) {
+          return { ok: false, error: "還有欄位需要填寫，請檢查標示的項目。", fieldErrors: fieldErrors };
+        }
+        return { ok: true, submitter: submitter.value, region: region.value, students: parsedStudents };
+      }
+
+      function openConfirm(parsed) {
+        pendingPayload = {
+          submitter: parsed.submitter,
+          region: parsed.region,
+          students: parsed.students,
+        };
+        var attemptKey = JSON.stringify(pendingPayload);
+        if (lastAttempt.key !== attemptKey || !lastAttempt.id) {
+          lastAttempt = { key: attemptKey, id: newSubmissionId() };
+        }
+        pendingPayload.submissionId = lastAttempt.id;
+        setConfirmStatus("");
+        document.getElementById("confirm-meta").textContent = "填寫人：" + parsed.submitter + "　區域：" + parsed.region;
+        var list = document.getElementById("confirm-list");
+        list.innerHTML = "";
+        parsed.students.forEach(function (student) {
+          var item = document.createElement("li");
+          item.className = campClass(student.camp).trim();
+          item.textContent =
+            student.branch +
+            " " +
+            student.chineseName +
+            "（" +
+            student.englishAlias +
+            "） 預約報名 " +
+            student.camp +
+            "｜" +
+            student.grade +
+            "｜意願：" +
+            student.intent;
+          list.appendChild(item);
+        });
+        var modal = document.getElementById("confirm-modal");
+        modal.hidden = false;
+        document.getElementById("confirm-send").focus();
+      }
+
+      function closeConfirm() {
+        document.getElementById("confirm-modal").hidden = true;
+        pendingPayload = null;
+      }
+
+      function setConfirmStatus(text) {
+        var node = document.getElementById("confirm-status");
+        if (!node) return;
+        node.textContent = text || "";
+        node.hidden = !text;
+      }
+
+      function withTimeout(promise, ms) {
+        return new Promise(function (resolve, reject) {
+          var timer = setTimeout(function () { reject(new Error("timeout")); }, ms);
+          promise.then(
+            function (value) { clearTimeout(timer); resolve(value); },
+            function (error) { clearTimeout(timer); reject(error); }
+          );
+        });
+      }
+
+      // 直接 POST 到 Apps Script 的 doPost（不帶 Google 登入狀態，避開多帳號登入的問題）。
+      function submitViaFetch(payload) {
+        if (!window.fetch) return Promise.reject(new Error("no fetch"));
+        var controller = window.AbortController ? new AbortController() : null;
+        var request = fetch(EXEC_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({ action: "submit", data: payload }),
+          credentials: "omit",
+          redirect: "follow",
+          cache: "no-store",
+          signal: controller ? controller.signal : undefined,
+        }).then(function (response) {
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          return response.text();
+        }).then(function (text) {
+          var result = JSON.parse(text);
+          if (!result || typeof result !== "object") throw new Error("bad response");
+          return result;
+        });
+        return withTimeout(request, REQUEST_TIMEOUT_MS).catch(function (error) {
+          if (controller) {
+            try { controller.abort(); } catch (ignore) {}
+          }
+          throw error;
+        });
+      }
+
+      function runSubmit(payload) {
+        // 同一個送出編號重試，伺服器只會寫入一次。
+        return submitViaFetch(payload).catch(function () {
+          setConfirmStatus("連線較慢，正在重新嘗試…（請勿關閉頁面）");
+          return submitViaFetch(payload);
+        });
+      }
+
+      function sendPayload(payload) {
+        if (submitting) return;
+        submitting = true;
+        document.getElementById("confirm-send").disabled = true;
+        document.getElementById("confirm-back").disabled = true;
+        document.getElementById("submit-btn").disabled = true;
+        document.getElementById("confirm-send").textContent = "送出中…";
+        document.getElementById("submit-btn").textContent = "送出中…";
+        setConfirmStatus("送出中，請稍候…");
+        runSubmit(payload)
+          .then(function (result) {
+            if (!result || !result.ok) {
+              closeConfirm();
+              applyErrors(result && result.fieldErrors);
+              var banner = document.getElementById("form-error");
+              banner.hidden = false;
+              banner.textContent = (result && result.error) || "送出失敗，請稍後再試。資料尚未寫入。";
+              banner.scrollIntoView({ behavior: "smooth", block: "center" });
+              return;
+            }
+            lastAttempt = { key: "", id: "" };
+            closeConfirm();
+            showSuccess(result.students || payload.students);
+          })
+          .catch(function () {
+            closeConfirm();
+            var banner = document.getElementById("form-error");
+            banner.hidden = false;
+            banner.textContent = "目前連線不穩，無法確認是否送出成功。請檢查網路後，直接再按一次「送出預約報名」；系統會自動避免重複登記。";
+            banner.scrollIntoView({ behavior: "smooth", block: "center" });
+          })
+          .finally(function () {
+            submitting = false;
+            setConfirmStatus("");
+            document.getElementById("confirm-send").disabled = false;
+            document.getElementById("confirm-back").disabled = false;
+            document.getElementById("submit-btn").disabled = false;
+            document.getElementById("confirm-send").textContent = "確認送出";
+            if (!document.getElementById("success-view").hidden) return;
+            document.getElementById("submit-btn").textContent = "送出預約報名（" + students.length + " 位學生）";
+          });
+      }
+
+      document.getElementById("add-student").addEventListener("click", function () {
+        if (students.length >= MAX_STUDENTS) return;
+        students.push(blankStudent());
+        renderStudents();
+      });
+
+      document.getElementById("reg-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (submitting) return;
+        clearErrors();
+        var parsed = validateClient(collectPayload());
+        if (!parsed.ok) {
+          applyErrors(parsed.fieldErrors);
+          var banner = document.getElementById("form-error");
+          banner.hidden = false;
+          banner.textContent = parsed.error;
+          return;
+        }
+        openConfirm(parsed);
+      });
+
+      document.getElementById("confirm-back").addEventListener("click", function () {
+        if (submitting) return;
+        document.getElementById("confirm-modal").hidden = true;
+        pendingPayload = null;
+        document.getElementById("submit-btn").focus();
+      });
+      document.getElementById("confirm-backdrop").addEventListener("click", function () {
+        if (submitting) return;
+        document.getElementById("confirm-modal").hidden = true;
+        pendingPayload = null;
+      });
+      document.getElementById("confirm-send").addEventListener("click", function () {
+        if (!pendingPayload || submitting) return;
+        sendPayload(pendingPayload);
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !document.getElementById("confirm-modal").hidden && !submitting) {
+          document.getElementById("confirm-modal").hidden = true;
+          pendingPayload = null;
+        }
+      });
+
+      function showSuccess(saved) {
+        document.getElementById("form-view").hidden = true;
+        var view = document.getElementById("success-view");
+        view.hidden = false;
+        document.getElementById("success-lead").textContent =
+          "已為 " + saved.length + " 位學生寫入預約時間（台北時間）。此時間由伺服器記錄，將作為之後依序排定的依據。";
+        var list = document.getElementById("success-list");
+        list.innerHTML = "";
+        saved.forEach(function (student, index) {
+          var item = document.createElement("li");
+          if (student.camp) item.className = campClass(student.camp).trim();
+          var name = document.createElement("p");
+          name.style.fontSize = "1.05rem";
+          name.style.fontWeight = "500";
+          var line = (index + 1) + ". ";
+          if (student.branch) line += student.branch + " ";
+          line += student.chineseName || "";
+          name.appendChild(document.createTextNode(line));
+          if (student.englishAlias) {
+            var alias = document.createElement("span");
+            alias.className = "alias";
+            alias.textContent = student.englishAlias;
+            name.appendChild(alias);
+          }
+          item.appendChild(name);
+          if (student.camp) {
+            var camp = document.createElement("p");
+            camp.textContent = "預約報名 " + student.camp;
+            item.appendChild(camp);
+          }
+          if (student.submittedAt) {
+            var time = document.createElement("p");
+            time.textContent = "預約時間（台北時間）：" + student.submittedAt;
+            item.appendChild(time);
+          }
+          list.appendChild(item);
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      renderStudents();
+    </script>
+  </body>
+</html>
