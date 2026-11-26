@@ -172,6 +172,31 @@
         font-size: 1.05rem;
         line-height: 1.7;
       }
+      .rep-banner {
+        background: var(--delft);
+        color: #fffdf8;
+        border-bottom: 6px solid var(--orange);
+        box-shadow: 0 8px 22px rgba(22, 58, 107, 0.16);
+      }
+      .rep-banner .wrap {
+        padding: 1.15rem 0 1.25rem;
+        text-align: center;
+      }
+      .rep-banner-title {
+        margin: 0;
+        font-weight: 900;
+        font-size: clamp(1.85rem, 6.8vw, 2.7rem);
+        line-height: 1.2;
+        letter-spacing: 0.06em;
+      }
+      .rep-banner-sub {
+        margin: 0.45rem auto 0;
+        max-width: 36rem;
+        font-weight: 500;
+        font-size: clamp(1.05rem, 3.6vw, 1.2rem);
+        line-height: 1.55;
+        color: #ffe6cf;
+      }
       .choices { display: grid; gap: 0.5rem; }
       .choices.two { grid-template-columns: 1fr 1fr; }
       .choice {
@@ -289,6 +314,12 @@
   <body>
     <div class="ribbon" aria-hidden="true"></div>
     <div class="motif" aria-hidden="true"></div>
+    <aside class="rep-banner" aria-label="區域招生代表填寫">
+      <div class="wrap">
+        <p class="rep-banner-title">區域招生代表填寫</p>
+        <p class="rep-banner-sub">本頁供各區招生代表使用，學生與家長請勿自行填寫</p>
+      </div>
+    </aside>
     <header class="wrap">
       <a class="sr-only" href="#registration-form">跳至預約表單</a>
       <div class="brand">
